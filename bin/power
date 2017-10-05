@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $1 == "off" ]]; then
+  cmd=power_off
+else
+  cmd=power_on
+fi
+
+cd $(dirname $0)/..
+ruby -I. -rtv_remote -e "TvRemote.new.$cmd"

@@ -1,0 +1,34 @@
+!!! 5
+%html
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    %title Statusscreen-Remote
+    %link(rel="stylesheet" href="/css/bootstrap.min.css")
+    %link(rel="stylesheet" href="/css/ladda-themeless.min.css")
+    %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    %script(src="/js/bootstrap.min.js")
+    %script(src="/js/spin.min.js")
+    %script(src="/js/ladda.min.js")
+  %body
+    .jumbotron
+      .container
+        %h1 Statusscreen-Remote
+    
+    .container
+      .row
+        .col-md-6
+          %h2 Channel Select
+          .btn-group.btn-group-lg
+            %a.btn.btn-info.ladda-button(data-style="zoom-in" href="/statusdroid"){class: "#{'active' if @current_channel == :statusdroid}"} Statusdroid
+            %a.btn.btn-info.ladda-button(data-style="zoom-in" href="/appletv"){class: "#{'active' if @current_channel == :apple_tv}"} AppleTV
+
+        .col-md-6
+          %h2 Power
+          .btn-group.btn-group-lg
+            %a.btn.btn-default.ladda-button(data-style="zoom-in" href="/on"){class: "#{'btn-success active' if @power_status == :on}"} On
+            %a.btn.btn-default.ladda-button(data-style="zoom-in" href="/off"){class: "#{'btn-danger active' if @power_status == :off}"} Off
+
+    :javascript
+      Ladda.bind('a.btn')
