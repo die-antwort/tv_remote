@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd $(dirname $0)/..
-bundle exec server.rb
+RACK_ENV=production bundle exec server.rb

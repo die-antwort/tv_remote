@@ -5,10 +5,6 @@ require "sinatra"
 require "haml"
 require_relative "./tv_remote"
 
-configure do
-  set :bind, "0.0.0.0"
-end
-
 before do
   @tv_remote = TvRemote.new
 end
