@@ -26,8 +26,8 @@ get '/on' do
   redirect to("/")
 end
 
-get '/statusdroid' do
-  @tv_remote.select_channel :statusdroid
+get '/status-pi' do
+  @tv_remote.select_channel :status_pi
   redirect to("/")
 end
 

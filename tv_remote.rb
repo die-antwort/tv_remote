@@ -8,7 +8,7 @@ class TvRemote
 
   CHANNELS = {
     apple_tv: 2,
-    statusdroid: 3
+    status_pi: 3
   }.freeze
 
   CMD_POWER = "ka"

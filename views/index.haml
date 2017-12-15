@@ -15,13 +15,13 @@
     .jumbotron
       .container
         %h1 Statusscreen-Remote
-    
+
     .container
       .row
         .col-md-6
           %h2 Channel Select
           .btn-group.btn-group-lg
-            %a.btn.btn-info.ladda-button(data-style="zoom-in" href="/statusdroid"){class: "#{'active' if @current_channel == :statusdroid}"} Statusdroid
+            %a.btn.btn-info.ladda-button(data-style="zoom-in" href="/status-pi"){class: "#{'active' if @current_channel == :status_pi}"} Status-Pi
             %a.btn.btn-info.ladda-button(data-style="zoom-in" href="/appletv"){class: "#{'active' if @current_channel == :apple_tv}"} AppleTV
 
         .col-md-6
